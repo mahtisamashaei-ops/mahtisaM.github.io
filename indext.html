@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>فروشگاه آنلاین عینک م.م</title>
+  <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css>
+  <link href=https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&family=Lalezar&display=swap rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <h1><I class="fas fa-glasses"></i> فروشگاه عینک نسیم</h1>
+          <span class="subtitle">مدیریت: ماه‌تیسا مشایی</span>
+        </div> 
+        <ul class="nav-menu">
+          <li><a href="#home" class="nav-link active"><I class="fas fa-home"></i> خانه</a></li>
+          <li><a href="#categories" class="nav-link"><I class="fas fa-store"></i> محصولات</a></li>
+          <li><a href="#prices" class="nav-link"><I class="fas fa-coins"></i> قیمت‌ها</a></li>
+          <li><a href="#videos" class="nav-link"><I class="fas fa-play-circle"></i> ویدیو ها</a></li>
+          <li><a href="#links" class="nav-link"><I class="fas fa-link"></i> لینک ها</a></li>
+          <li><a href="#about" class="nav-link"><I class="fas fa-circle-info"></i> درباره ما</a></li>
+          <li><a href="#contact" class="nav-link"><I class="fas fa-phone"></i> تماس </a></li>
+        </ul>
+        <button class="menu-toggle">
+          <I class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!--بخش اصلی – هیرو -->
+  <section id="home" class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <div class="profile-container">
+          <div class="profile-img-frame">
+            <img src="my picture.jpg" alt="ماه‌تیسا مشایی" class="profile-img">
+            <div class="profile-badge">
+              <I class="fas fa-star"></i>طراح سایت و مدیر فروشگاه
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-text">
+          <h2 class="hero-title">فروشگاه تخصصی <span class="highlight">عینک</span></h2>
+          <h3 class="hero-subtitle">ماه‌تیسا مشایی | مدیر و طراح</h3>
+          <p class="hero-desc">
+          <br>به فروشگاه آنلاین عینک خوش آمدید. در اینجا انواع عینک‌های آفتابی، طبی، بلوکات و مدل‌های لوکس 
+          <br> را با بهترین کیفیت و مناسب‌ترین قیمت مشاهده می‌کنید. تضمین اصالت کالا و خدمات پس از فروش.
+          </p>
+          
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-number">+50</span>
+              <span class="stat-label">مدل عینک</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">۱۰۰%</span>
+              <span class="stat-label">اصالت کالا</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">۹۸%</span>
+              <span class="stat-label">رضایت مشتری</span>
+            </div>
+          </div>
+          
+          <div class="hero-buttons">
+            <a href="#categories" class="btn btn-primary">
+              <I class="fas fa-shopping-bag"></i>
+              مشاهده محصولات
+            </a>
+            <a href="#consultation" class="btn btn-secondary">
+              <I class="fas fa-headset"></i> مشاوره رایگان
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+  <!--دسته‌بندی محصولات -->
+  <section id="categories" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><I class="fas fa-layer-group"></i> دسته‌بندی محصولات</h2>
+        <p class="section-subtitle">انتخاب از میان بهترین برندها و مدل‌ها</p>
+      </div>
+      
+      <div class="category-tabs">
+        <button class="category-tab" onclick="filterProducts('sunglasses')">عینک آفتابی</button>
+        <button class="category-tab" onclick="filterProducts('optical')">عینک طبی</button>
+        <button class="category-tab" onclick="filterProducts('blueblock')">عینک بلوکات</button>
+        <button class="category-tab" onclick="filterProducts('luxury')">مدل‌های لوکس</button>
+      </div>
+      
+      <div class="products-grid" id="productsContainer">
+        <!--محصولات با JavaScript پر می‌شوند -->
+      </div>
+    </div>
+<section id="products" class="courses-section">
+    <div class="container">
+        <h2 class="section-title"><I class="fas fa-glasses me-2"></i> محصولات فروشگاه</h2>
+        
+        <!--کارت‌های محصولات -->
+        <div class="products-container" id="productsContainer">
+            <!--عینک‌های آفتابی -->
+            <div class="product-card category-sunglasses">
+                <div class="product-header">
+                    <I class="fas fa-sun product-icon"></i>
+                    <h4>عینک آفتابی کلاسیک</h4>
+                    <span class="discount-badge">۱۸% تخفیف</span>
+                </div>
+                <div class="product-body">
+                    <h5>نام محصول: عینک آفتابی کلاسیک</h5>
+                    <p><strong>توضیحات:</strong> مناسب برای روزهای آفتابی و مهمانی‌ها و مراسمات شیک. لنز پلاریزه و محافظ UV400</p>
+                    
+                    <div class="product-info">
+                        <h6><I class="fas fa-tag"></i> <strong>ویژگی‌ها:</strong></h6>
+                        <p>• لنز پلاریزه</p>
+                        <p>• محافظ UV400</p>
+                        <p>• فریم فلزی با کیفیت</p>
+                        <p>• رنگ‌بندی متنوع</p>
+                    </div>
+                    
+                    <div class="product-price">
+                        <p><I class="fas fa-calendar-alt"></i> <strong>موجودی:</strong> موجود در انبار</p>
+                        <p><I class="fas fa-money-bill-wave"></i> <strong>قیمت:</strong> 
+                            <span style="color: #FF6B6B; font-weight: bold; font-size: 1.2rem;">۷۰۰,۰۰۰ تومان</span>
+                            <small style="text-decoration: line-through; color: #777; margin-right: 10px;">۸۵۰,۰۰۰ تومان</small>
+                        </p>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="#" class="btn btn-primary" style="padding: 10px 25px;">
+                            <I class="fas fa-shopping-cart me-2"></i> افزودن به سبد خرید
+                        </a>
+                        <a href="#" class="btn btn-secondary" style="padding: 10px 25px; margin-right: 10px;">
+                            <I class="fas fa-eye me-2"></i> مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--عینک طبی --> 
+            <div class="product-card category-optical">
+                <div class="product-header">
+                    <I class="fas fa-eye product-icon"></i>
+                    <h4>عینک طبی زنانه</h4>
+                    <span class="discount-badge">۱۳% تخفیف</span>
+                </div>
+                <div class="product-body">
+                    <h5>نام محصول: عینک طبی زنانه</h5>
+                    <p><strong>توضیحات:</strong> دارای سایزهای مختلف و مدل‌های متنوع. مناسب برای تمامی سنین</p>
+                    
+                    <div class="product-info">
+                        <h6><I class="fas fa-tag"></i> <strong>ویژگی‌ها:</strong></h6>
+                        <p>• قابلیت نمره‌گذاری</p>
+                        <p>• فریم تیتانیوم سبک</p>
+                        <p>• لنز ضد خش</p>
+                        <p>• طراحی ارگونومیک</p>
+                    </div>
+                    
+                    <div class="product-price">
+                        <p><I class="fas fa-calendar-alt"></i> <strong>موجودی:</strong> موجود در انبار</p>
+                        <p><I class="fas fa-money-bill-wave"></i> <strong>قیمت:</strong> 
+                            <span style="color: #FF6B6B; font-weight: bold; font-size: 1.2rem;">۶۵۰,۰۰۰ تومان</span>
+                            <small style="text-decoration: line-through; color: #777; margin-right: 10px;">۷۵۰,۰۰۰ تومان</small>
+                        </p>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="#" class="btn btn-primary" style="padding: 10px 25px;">
+                            <I class="fas fa-shopping-cart me-2"></i> افزودن به سبد خرید
+                        </a>
+                        <a href="#" class="btn btn-secondary" style="padding: 10px 25px; margin-right: 10px;">
+                            <I class="fas fa-eye me-2"></i> مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--عینک بلوکات -->
+            <div class="product-card category-blueblock">
+                <div class="product-header">
+                    <I class="fas fa-laptop product-icon"></i>
+                    <h4>عینک بلوکات کامپیوتر</h4>
+                    <span class="discount-badge">۱۶% تخفیف</span>
+                </div>
+                <div class="product-body">
+                    <h5>نام محصول: عینک بلوکات کامپیوتر</h5>
+                    <p><strong>توضیحات:</strong> محافظ چشم در برابر نور آبی دستگاه‌های دیجیتال. مناسب گیمرها و کارمندان</p>
+                    
+                    <div class="product-info">
+                        <h6><I class="fas fa-tag"></i> <strong>ویژگی‌ها:</strong></h6>
+                        <p>• فیلتر نور آبی ۹۵%</p>
+                        <p>• ضد خستگی چشم</p>
+                        <p>• سبک و راحت</p>
+                        <p>• قابلیت تنظیم</p>
+                    </div>
+                    
+                    <div class="product-price">
+                        <p><I class="fas fa-calendar-alt"></i> <strong>موجودی:</strong> موجود در انبار</p>
+                        <p><I class="fas fa-money-bill-wave"></i> <strong>قیمت:</strong> 
+                            <span style="color: #FF6B6B; font-weight: bold; font-size: 1.2rem;">۸۰۰,۰۰۰ تومان</span>
+                            <small style="text-decoration: line-through; color: #777; margin-right: 10px;">۹۵۰,۰۰۰ تومان</small>
+                        </p>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="#" class="btn btn-primary" style="padding: 10px 25px;">
+                            <I class="fas fa-shopping-cart me-2"></i> افزودن به سبد خرید
+                        </a>
+                        <a href="#" class="btn btn-secondary" style="padding: 10px 25px; margin-right: 10px;">
+                            <I class="fas fa-eye me-2"></i> مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!--عینک لوکس--> 
+            <div class="product-card category-luxury">
+                <div class="product-header">
+                    <I class="fas fa-gem product-icon"></i>
+                    <h4>عینک لوکس گوچی</h4>
+                </div>
+                <div class="product-body">
+                    <h5>نام محصول: عینک لوکس گوچی</h5>
+                    <p><strong>توضیحات:</strong> مدل لوکس و لاکچری برند Gucci. مناسب مراسمات خاص و افراد خاص‌پسند</p>
+                    
+                    <div class="product-info">
+                        <h6><I class="fas fa-tag"></i> <strong>ویژگی‌ها:</strong></h6>
+                        <p>• برند اورجینال Gucci</p>
+                        <p>• جنس فریم: استخوانی</p>
+                        <p>• جعبه چرمی اختصاصی</p>
+                        <p>• گارانتی اصالت کالا</p>
+                    </div>
+                    
+                    <div class="product-price">
+                        <p><I class="fas fa-calendar-alt"></i> <strong>موجودی:</strong> محدود</p>
+                        <p><I class="fas fa-money-bill-wave"></i> <strong>قیمت:</strong> 
+                            <span style="color: #FF6B6B; font-weight: bold; font-size: 1.2rem;">۲,۵۰۰,۰۰۰ تومان</span>
+                        </p>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="#" class="btn btn-primary" style="padding: 10px 25px;">
+                            <I class="fas fa-shopping-cart me-2"></i> افزودن به سبد خرید
+                        </a>
+                        <a href="#" class="btn btn-secondary" style="padding: 10px 25px; margin-right: 10px;">
+                            <I class="fas fa-eye me-2"></i> مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--محصولات بیشتر...--> 
+            <div class="product-card category-blueblock">
+                <div class="product-header">
+                    <I class="fas fa-plane"></i>
+                    <h4>عینک مدل خلبانی با فرم قطره ای</h4>
+                    <span class="discount-badge">۱۶% تخفیف</span>
+                </div>
+                <div class="product-body">
+                    <h5>نام محصول: عینک مدل خلبانی</h5>
+                    <p><strong>توضیحات:</strong> مناسب اکثر صورت ها و شیشه ترند.</p>
+                    
+                    <div class="product-info">
+                        <h6><I class="fas fa-tag"></i> <strong>ویژگی‌ها:</strong></h6>
+                        <p>• فیلتر نور آبی ۹۵%</p>
+                        <p>• ضد خستگی چشم</p>
+                        <p>• سبک و راحت</p>
+                        <p>• قابلیت تنظیم</p>
+                    </div>
+                    
+                    <div class="product-price">
+                        <p><I class="fas fa-calendar-alt"></i> <strong>موجودی:</strong> موجود در انبار</p>
+                        <p><I class="fas fa-money-bill-wave"></i> <strong>قیمت:</strong> 
+                            <span style="color: #FF6B6B; font-weight: bold; font-size: 1.2rem;">۸۰۰,۰۰۰ تومان</span>
+                            <small style="text-decoration: line-through; color: #777; margin-right: 10px;">۹۵۰,۰۰۰ تومان</small>
+                        </p>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="#" class="btn btn-primary" style="padding: 10px 25px;">
+                            <I class="fas fa-shopping-cart me-2"></i> افزودن به سبد خرید
+                        </a>
+                        <a href="#" class="btn btn-secondary" style="padding: 10px 25px; margin-right: 10px;">
+                            <I class="fas fa-eye me-2"></i> مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-card category-blueblock">
+                <div class="product-header">
+                    <I class="fas fa-glasses"></i>
+                    <h4>عینک D-frame</h4>
+                    <span class="discount-badge">۱۶% تخفیف</span>
+                </div>
+                <div class="product-body">
+                    <h5>نام محصول: عینک دی فریم</h5>
+                    <p><strong>توضیحات:</strong> دارای قاب نسبتا صاف و ضخیم و گزینه ی عالی برای سبک روزمره</p>
+                    
+                    <div class="product-info">
+                        <h6><I class="fas fa-tag"></i> <strong>ویژگی‌ها:</strong></h6>
+                        <p>• فیلتر نور آبی ۹۵%</p>
+                        <p>• ضد خستگی چشم</p>
+                        <p>• سبک و راحت</p>
+                        <p>• قابلیت تنظیم</p>
+                    </div>
+                    
+                    <div class="product-price">
+                        <p><I class="fas fa-calendar-alt"></i> <strong>موجودی:</strong> موجود در انبار</p>
+                        <p><I class="fas fa-money-bill-wave"></i> <strong>قیمت:</strong> 
+                            <span style="color: #FF6B6B; font-weight: bold; font-size: 1.2rem;">۸۰۰,۰۰۰ تومان</span>
+                            <small style="text-decoration: line-through; color: #777; margin-right: 10px;">۹۵۰,۰۰۰ تومان</small>
+                        </p>
+                    </div>
+                    
+                    <div class="mt-3 text-center">
+                        <a href="#" class="btn btn-primary" style="padding: 10px 25px;">
+                            <I class="fas fa-shopping-cart me-2"></i> افزودن به سبد خرید
+                        </a>
+                        <a href="#" class="btn btn-secondary" style="padding: 10px 25px; margin-right: 10px;">
+                            <I class="fas fa-eye me-2"></i> مشاهده جزئیات
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ * <!--جدول قیمت‌ ها -->
+  <section id="prices" class="section price-table-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><I class="fas fa-tags"></i> لیست قیمت‌ها</h2>
+        <p class="section-subtitle">مقایسه قیمت و ویژگی‌ها</p>
+      </div>
+      
+      <div class="table-responsive">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>ردیف</th>
+              <th>عکس محصول</th>
+              <th>انواع عینک</th>
+              <th>قیمت</th>
+              <th>تخفیف</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td><img src="عینک1.jpg" alt="عینک آفتابی" class="table-image"></td>
+              <td>
+                <strong>عینک آفتابی کلاسیک</strong><br>
+                <small>مناسب برای روزهای آفتابی و مهمانی‌ها و مراسمات شیک</small>
+              </td>
+              <td>
+                <span class="current-price">۷۰۰,۰۰۰ تومان</span><br>
+                <span class="original-price">۸۵۰,۰۰۰ تومان</span>
+              </td>
+              <td><span class="discount-badge">۱۸% تخفیف</span></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><img src="عینک2.jpg" alt="عینک طبی" class="table-image"></td>
+              <td>
+                <strong>عینک طبی زنانه</strong><br>
+                <small>دارای سایزهای مختلف و مدل‌های متنوع</small>
+              </td>
+              <td>
+                <span class="current-price">۶۵۰,۰۰۰ تومان</span><br>
+                <span class="original-price">۷۵۰,۰۰۰ تومان</span>
+              </td>
+              <td><span class="discount-badge">۱۳% تخفیف</span></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td><img src="عینک3.jpg" alt="عینک بلوکات" class="table-image"></td>
+              <td>
+                <strong>عینک بلوکات کامپیوتر</strong><br>
+                <small>محافظ چشم در برابر نور آبی دستگاه‌ها</small>
+              </td>
+              <td>
+                <span class="current-price">۸۰۰,۰۰۰ تومان</span><br>
+                <span class="original-price">۹۵۰,۰۰۰ تومان</span>
+              </td>
+              <td><span class="discount-badge">۱۶% تخفیف</span></td>
+            </tr>
+             <tr>
+              <td>4</td>
+              <td><img src="عینک10.jpg" alt="عینک خلبانی" class="table-image"></td>
+              <td>
+                <strong>عینک aviator</strong><br>
+                <small>محافظ چشم در برابر نور آبی دستگاه‌ها</small>
+              </td>
+              <td>
+                <span class="current-price">۸۰۰,۰۰۰ تومان</span><br>
+                <span class="original-price">۹۵۰,۰۰۰ تومان</span>
+              </td>
+              <td><span class="discount-badge">۱۶% تخفیف</span></td>
+            </tr>
+             <tr>
+              <td>5</td>
+              <td><img src="عینک9.jpg" alt="عینک دی فریم" class="table-image"></td>
+              <td>
+                <strong>عینک D-fraim</strong><br>
+                <small>محافظ چشم در برابر نور آبی دستگاه‌ها</small>
+              </td>
+              <td>
+                <span class="current-price">۸۰۰,۰۰۰ تومان</span><br>
+                <span class="original-price">۹۵۰,۰۰۰ تومان</span>
+              </td>
+              <td><span class="discount-badge">۱۶% تخفیف</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+ *   </div>
+  </section>
+
+
+   <!-- ویدئوها -->
+    <section id="videos" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-play-circle"></i> ویدئوهای رایگان
+                </h2>
+                <p class="section-subtitle">نمونه‌ای از محصولات پرفروش</p>
+            </div>
+            
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <div class="video-player">
+                        <video controls poster="video1.mp4" width="300%" height="160%">
+                            <source src="video1.mp4" type="video/mp4">
+                            <p>مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند. می‌توانید<a href="1.mp4">آن را دانلود کنید</a>.</p>
+                        </video>
+                        <p class="video-caption"></p>
+                    </div>
+                                        
+                    <div class="video-info">
+                        <h3>عینک طبی مدل Tria رنگ قهوه ای</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-clock"></i> 11 ثانیه</span>
+                            <span><i class="fas fa-eye"></i> ۱۲,۵۴۳ بازدید</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-wrapper">
+                    <div class="video-player">
+                        <video controls poster="video3.mp4" width="300%" height="160%">
+                            <source src="video3.mp4" type="video/mp4">
+                            <p>مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند. می‌توانید <a href="2.mp4">آن را دانلود کنید</a>.</p>
+                        </video>
+                        <p class="video-caption"></p>
+                    </div>
+                    <div class="video-info">
+                        <h3> راهنمای خرید عدسی عینک اورجینال</h3>
+                        <p></p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-clock"></i> 45 ثانیه</span>
+                            <span><i class="fas fa-eye"></i> ۸,۳۴۲ بازدید</span>
+                        </div>
+                    </div>
+                </div>
+           
+             
+                <div class="video-wrapper">
+                    <div class="video-player">
+                        <video controls poster="video (2).mp4" width="300%" height="160%">
+                            <source src="video (2).mp4" type="video/mp4">
+                            <p>مرورگر شما از پخش ویدیو پشتیبانی نمی‌کند. می‌توانید <a href="3.mp4">آن را دانلود کنید</a>.</p>
+                        </video>
+                        <p class="video-caption"></p>
+                    </div>
+                    <div class="video-info">
+                      <h3>عینک بلوکات</h3>
+                        <div class="video-meta">
+                            <span><i class="fas fa-clock"></i> 20 ثانیه</span>
+                            <span><i class="fas fa-eye"></i> ۱۰,۱۲۳ بازدید</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-thumbnails">
+                    <div class="thumbnail active">
+                        <img src="عینک6.jpg" alt="">
+                        <span>عینک آفتابی</span>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="عینک7.jpg" alt="آشپزی">
+                        <span>عینک بلوکات آخرین مدل</span>
+                    </div>
+                    <div class="thumbnail">
+                        <img src="عینک5.jpg" alt="نوشیدنی">
+                        <span>عینک طبی</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+
+
+ <!-- منابع مفید -->
+    <section id="links" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-external-link-alt"></i> لینک‌ها و منابع مفید
+                </h2>
+                <p class="section-subtitle">سایت‌های مرجع برای توسعه مهارت‌های برنامه‌نویسی</p>
+            </div>
+            
+            <div class="links-grid">
+                <a href="https://raybansmarket.com" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-glasses"></i>
+                    </div>
+                    <h3>raybansmarket</h3>
+                    <p> از گزینه های تخصصی برای خرید عینک افتابی به صورت اینترنتی</p>
+                </a>
+                
+                <a href="https://doctoreynak.com" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-glasses"></i>
+                    </div>
+                    <h3>Doctor Eynak</h3>
+                    <p>یکی از بزرگ ترین و جامع ترین فروشگاه های اینترنتی در حوزه عینک در ایران</p>
+                </a>
+                
+                <a href="https://emiroptic.com" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-computer"></i>
+                    </div>
+                    <h3>Emiroptic</h3>
+                    <p>اطلاعات فنی در باره ی عینک ها مخصوص کامپیوتر و محافظت در برابر نور آبی </p>
+                </a>
+                
+                <a href="https://kurdoptic.com" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Kurdoptic</h3>
+                    <p>تمرکز بر روی برندهای سطح بالا و لوکس </p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+  <!--درباره ما -->
+  <section id="about" class="section bg-light">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title"><I class="fas fa-info-circle"></i> درباره ما</h2>
+        <p class="section-subtitle">داستان ما و ارزش‌هایمان</p>
+      </div>
+      
+      <div class="about-content" style="background: white; padding: 3rem; border-radius: 15px; box-shadow: var(--shadow);">
+        <div class="row" style="display: flex; align-items: center; gap: 3rem;">
+          <div style="flex: 1;">
+            <h3 style="color: var(--primary-color); margin-bottom: 1.5rem; font-size: 1.8rem;">فروشگاه عینک م.م</h3>
+            <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+              این فروشگاه توسط <strong>ماه‌تیسا مشایی</strong> مدیریت می‌شود و با هدف ارائه بهترین مدل‌های عینک 
+              با کیفیت بالا و قیمت مناسب تأسیس شده است. ما بر این باوریم که عینک تنها یک وسیله نیست، 
+              بلکه بیانگر سبک زندگی و شخصیت شماست.
+            </p>
+            <p style="margin-bottom: 1.5rem; line-height: 1.8;">
+              با بیش از ۵ سال تجربه در زمینه فروش عینک، تیم ما همواره در تلاش است تا جدیدترین 
+              ترندهای جهانی را با سلیقه ایرانی ترکیب کرده و محصولاتی منحصربه‌فرد ارائه دهد.
+            </p>
+            <div class="features" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem;">
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <I class="fas fa-check-circle" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                <span>تضمین اصالت کالا</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <I class="fas fa-check-circle" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                <span>خدمات پس از فروش</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <I class="fas fa-check-circle" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                <span>مشاوره تخصصی</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem;">
+                <I class="fas fa-check-circle" style="color: var(--accent-color); font-size: 1.2rem;"></i>
+                <span>ارسال سریع</span>
+              </div>
+            </div>
+          </div>
+          <!--عکس اصلی که روش کلیک میکنیم-->
+          <div class="about-image" onclick="openGallery()">
+            <img src="بک گراند درباره ما.jpg" alt="about images">
+            <p>برای دیدن ویترین کلیک کنید</p>
+          </div>
+          <!--صفحه گالری(مخفی در ابتدا)-->
+          <div id="galleryPage" style="display: none;">
+            <button onclick="closeGallery()">بستن</button>
+            <h2>گالری تصاویر</h2>
+
+            <div class="gallery-images">
+              <img src="عینک1.jpg" alt="">
+              <img src="عینک3.jpg" alt="">
+              <img src="عینک5.jpg" alt="">
+              <img src="عینک9.jpg" alt="">
+              <img src="عینک11.jpg" alt="">
+              <img src="عینک12.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- تماس -->
+  <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <i class="fas fa-envelope"></i> ارتباط با ما
+                </h2>
+                <p class="section-subtitle">برای مشاوره رایگان، پیشنهاد همکاری یا سوالات آموزشی با ما در تماس باشید</p>
+            </div>
+                    
+                  <!--  <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <div>
+                                <h4>ایمیل</h4>
+                                <p>roshan.hadi@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h4>تلگرام</h4>
+                                <p>@HadiRoshan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>تلفن</h4>
+                                <p>01155256633-09112921512</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="http://t.me/HadiRoshan" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>  -->
+                
+                <div class="contact-form">
+                    <h3>ارسال پیام</h3>
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="نام و نام خانوادگی" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="ایمیل" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="موضوع" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="5" placeholder="متن پیام شما..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> ارسال پیام
+                        </button>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!--فوتر -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3><I class="fas fa-glasses"></i> فروشگاه عینک م.م</h3>
+          <p>ارائه بهترین مدل‌های عینک با کیفیت جهانی و قیمت مناسب. اصالت کالا و رضایت مشتری اولویت ماست.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><I class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><I class="fab fa-telegram"></i></a>
+            <a href="#" class="social-link"><I class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3><I class="fas fa-link"></i> لینک‌های سریع</h3>
+          <ul class="footer-links">
+            <li><a href="#home"><I class="fas fa-chevron-left"></i> خانه</a></li>
+            <li><a href="#categories"><I class="fas fa-chevron-left"></i> محصولات</a></li>
+            <li><a href="#prices"><I class="fas fa-chevron-left"></i> قیمت‌ها</a></li>
+            <li><a href="#about"><I class="fas fa-chevron-left"></i> درباره ما</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h3><I class="fas fa-phone"></i> تماس با ما</h3>
+          <ul class="footer-links">
+            <li><a href=tel:+989123456789><I class="fas fa-phone"></i> ۰۹۱۲۳۴۵۶۷۸۹</a></li>
+            <li><a href=mailto:info@example.com><I class="fas fa-envelope"></i> info@example.com</a></li>
+            <li><I class="fas fa-map-marker-alt"></i> رامسر، خیابان مطهری، پلاک ۱۲۳</li>
+            <li><I class="fas fa-clock"></i> شنبه تا چهارشنبه: ۹ صبح تا ۸ شب</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>© 2026 تمام حقوق برای فروشگاه عینک م.م محفوظ است | طراحی و توسعه توسط ماه‌تیسا مشایی</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // داده‌های محصولات
+    Constproducts = [
+      {
+        Id: 1,
+        Name: "عینک آفتابی کلاسیک",
+        Category: "sunglasses",
+        Image: "image.jpg",
+        Description: "مناسب برای روزهای آفتابی و مهمانی‌ها و مراسمات شیک",
+        Price: 700000,
+        originalPrice: 850000,
+        features: ["UV400", "لنز پلاریزه", "فریم فلزی"]
+      },
+      {
+        Id: 2,
+        Name: "عینک طبی زنانه",
+        Category: "optical",
+        Image: "image.jpg",
+        Description: "دارای سایزهای مختلف و مدل‌های متنوع",
+        Price: 650000,
+        originalPrice: 750000,
+        features: ["قابلیت نمره‌گذاری", "فریم تیتانیوم", "ضد خش"]
+      },
+      {
+        Id: 3,
+        Name: "عینک بلوکات کامپیوتر",
+        Category: "blueblock",
+        Image: "عینک3.jpg",
+        Description: "محافظ چشم در برابر نور آبی دستگاه‌های دیجیتال",
+        Price: 800000,
+        originalPrice: 950000,
+        features: ["فیلتر نور آبی", "ضد انعکاس", "سبک و راحت"]
+      },
+      {
+        Id: 4,
+        Name: "عینک آفتابی اسپرت",
+        Category: "sunglasses",
+        Image: image.jpg,
+        description: "طراحی مدرن و اسپرت برای فعالیت‌های روزانه",
+        Price: 550000,
+        originalPrice: 700000,
+        features: ["لنز پلی کربنات", "فریم پلاستیکی", "ضد ضربه"]
+      },
+      {
+        Id: 5,
+        Name: "عینک طبی پیشرفته",
+        Category: "optical",
+        Image: image.jpg,
+        description: "تکنولوژی روز برای دید بهتر و راحت‌تر",
+        Price: 900000,
+        originalPrice: 1100000,
+        features: ["لنز فوتوکرومیک", "ضد بخار", "آنتی رفلکس"]
+      },
+      {
+        Id: 6,
+        Name: "عینک لوکس گوچی",
+        Category: "luxury",
+        Image: image.jpg,
+        Description: "مدل لوکس و لاکچری برند Gucci",
+        Price: 2500000,
+        originalPrice: 3000000,
+        features: ["برند اورجینال", "جنس استخوانی", "جعبه چرمی"]
+      },
+      {
+        Id: 7,
+        Name: "عینک آفتابی ویفریم",
+        Category: "sunglasses",
+        Image:  image.jpg,
+        Description: "فریم عریض و جذاب برای استایل خاص",
+        Price: 600000,
+        originalPrice: 750000,
+        features: ["لنز گرادینت", "فریم استیل", "محافظ ۱۰۰% UV"]
+      },
+      {
+        Id: 8,
+        Name: "عینک بلوکات گیمینگ",
+        Category: "blueblock",
+        Image: image.jpg,
+        Description: "مخصوص گیمرها و کاربران حرفه‌ای کامپیوتر",
+        Price: 850000,
+        originalPrice: 1000000,
+        features: ["فیلتر نور آبی ۹۵%", "ضد خستگی چشم", "قابلیت تنظیم"]
+      }
+    ];
+
+    // نمایش محصولات
+    FunctiondisplayProducts(filter = 'all')   
+      Constcontainer = document.getElementById('productsContainer');
+      Container.innerHTML = '';
+      
+      ConstfilteredProducts = filter === 'all' 
+        ? products 
+        : products.filter(product => product.category === filter);
+      
+      filteredProducts.forEach(product => {
+        const discount = Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100);
+        const productCard = `
+          <div class="product-card">
+            <img src="${product.image}" alt="${product.name}" class="product-image">
+            <div class="product-content">
+              <h3 class="product-title">${product.name}</h3>
+              <p class="product-description">${product.description}</p>
+              
+              <div class="product-features" style="margin-bottom: 1rem;">
+                ${product.features.map(feature => 
+                  `<span style="background: #e9f5ff; color: var(--primary-color); padding: 0.3rem 0.6rem; border-radius: 12px; font-size: 0.8rem; margin-left: 0.5rem; margin-bottom: 0.5rem; display: inline-block;">
+                    ${feature}
+                  </span>`
+                ).join('') }
+              </div>
+              
+              <div class="product-price">
+                <span class="current-price">${product.price.toLocaleString()} تومان</span>
+                <span class="original-price">${product.originalPrice.toLocaleString()} تومان</span>
+                ${discount > 0 ? `<span class="discount-badge">${discount}% تخفیف</span>` : ''}
+              </div>
+
+              <div class="product-actions">
+                <a href="#" class="btn btn-view" onclick="viewProduct(${product.id})">
+                  <I class="fas fa-eye"></i> مشاهده محصول
+                </a>
+                <a href="#" class="btn-cart" onclick="addToCart(${product.id})">
+                  <I class="fas fa-shopping-cart"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        `;
+        
+        Container.innerHTML += productCard;
+      });
+
+    // فیلتر محصولات
+    FunctionfilterProducts(category) 
+      // آپدیت تب‌های فعال
+    {  Document.querySelectorAll('.category-tab').forEach(tab => {
+        Tab.classList.remove('active');
+    });
+      Event.target.classList.add('active');
+      
+      // نمایش محصولات فیلتر شده
+      displayProducts(category);
+    }
+
+    // مشاهده محصول
+    FunctionviewProduct(id) 
+    {  Constproduct = products.find(p => p.id === id);
+      Alert(`مشاهده محصول: ${product.name}\nقیمت: ${product.price.toLocaleString()} تومان`);
+    }
+
+    // اضافه به سبد خرید
+    FunctionaddToCart(id) 
+    {  Constproduct = products.find(p => p.id === id);
+      Alert(`محصول "${product.name}" به سبد خرید اضافه شد!`);
+    }
+
+    // اسکرول نرم
+    Document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      Anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if(targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // منوی موبایل
+    Document.querySelector('.menu-toggle').addEventListener('click', function() {
+      Document.querySelector('.nav-menu').classList.toggle('show');
+    });
+
+    // لود اولیه
+    Document.addEventListener('DOMContentLoaded', function() {
+      displayProducts('all');
+    });
+
+    function openGallery()  {
+      document.getElementById('gallerypages').style.display = 'block';
+    }
+
+    function closeGallery() {
+      document.getElementById('gallerypages').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,858 @@
+  /* Reset و تنظیمات پایه */
+*{
+        Margin: 0;
+        Padding: 0;
+        Box-sizing: border-box;
+    }
+
+    :root {
+        --primary-color: #4A6FA5;      /* آبی متمایل به بنفش */
+        --secondary-color: #FF7E5F;    /* نارنجی جذاب */
+        --accent-color: #6BCF7F;       /* سبز */
+        --light-color: #F8F9FA;
+        --dark-color: #2C3E50;
+        --text-color: #333;
+        --text-light: #777;
+        --border-color: #E1E5EB;
+        --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        --transition: all 0.3s ease;
+    }
+
+    Body {
+        Font-family: 'Vazirmatn', sans-serif;
+        Line-height: 1.8;
+        Color: var(--text-color);
+        Background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+        Direction: rtl;
+        Text-align: right;
+        Min-height: 100vh;
+    }
+
+    H1, h2, h3, h4, .lalezar {
+        Font-family: 'Lalezar', cursive;
+        Font-weight: 400;
+    }
+
+    .container {
+        Width: 100%;
+        Max-width: 1200px;
+        Margin: 0 auto;
+        Padding: 0 20px;
+    }
+
+    /* هدر و نویگیشن */
+    .main-header {
+        Background: linear-gradient(135deg, var(--secondary-color), #4A6FA5);
+        Color: white;
+        Padding: 1rem 0;
+        Position: sticky;
+        Top: 0;
+        z-index: 1000;
+        box-shadow: var(--shadow);
+    }
+
+    .navbar {
+        Display: flex;
+        Justify-content: space-between;
+        Align-items: center;
+    }
+
+    .nav-brand h1 {
+        Font-size: 1.8rem;
+        Margin-bottom: 0.3rem;
+        Display: flex;
+        Align-items: center;
+        Gap: 10px;
+    }
+
+    .nav-brand .subtitle {
+        Font-size: 0.9rem;
+        Opacity: 0.9;
+    }
+
+    .nav-menu {
+        Display: flex;
+        List-style: none;
+        Gap: 1.5rem;
+        margin-right: 20px;
+    }
+
+    .nav-link {
+        Color: white;
+        Text-decoration: none;
+        Padding: 0.5rem 1rem;
+        Border-radius: 4px;
+        Transition: var(--transition);
+        Display: flex;
+        Align-items: center;
+        Gap: 0.5rem;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        Background-color: rgba(255, 255, 255, 0.2);
+        Transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+        Display: none;
+        Background: none;
+        Border: none;
+        Color: white;
+        Font-size: 1.5rem;
+        Cursor: pointer;
+    }
+
+    /* بخش هیرو */
+    .hero-section {
+        Background: url('b\ p.png');
+        background-size: cover;
+        background-position: center;
+        padding: 5rem 0;
+        color: white;
+    }
+
+    .hero-content {
+        Display: flex;
+        Align-items: center;
+        Gap: 4rem;
+    }
+
+    .profile-container {
+        Flex: 1;
+    }
+
+    .profile-img-frame {
+        Position: relative;
+        Width: 300px;
+        Height: 300px;
+        Margin: 0 auto;
+    }
+
+    .profile-img {
+        Width: 100%;
+        Height: 100%;
+        Object-fit: cover;
+        Border-radius: 50%;
+        Border: 6px solid rgba(255, 255, 255, 0.3);
+        Box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .profile-badge {
+        Position: absolute;
+        Bottom: -80px;
+        Left: 30px;
+        Background: var(--secondary-color);
+        Color: white;
+        Padding: 0.7rem 1.5rem;
+        Border-radius: 30px;
+        Font-weight: bold;
+        Display: flex;
+        Align-items: center;
+        Gap: 0.5rem;
+        Box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .hero-text {
+        Flex: 2;
+    }
+
+    .hero-title {
+        Font-size: 3rem;
+        Margin-bottom: 1rem;
+    }
+
+    .hero-title .highlight {
+        Color: #FFD166;
+    }
+
+    .hero-subtitle {
+        Font-size: 1.5rem;
+        Opacity: 0.9;
+        Margin-bottom: 1.5rem;
+    }
+
+    .hero-desc {
+        Font-size: 1.1rem;
+        Margin-bottom: 2rem;
+        Line-height: 1.8;
+    }
+
+    .hero-stats {
+        Display: flex;
+        Gap: 3rem;
+        Margin-bottom: 2rem;
+    }
+
+    .stat {
+        Text-align: center;
+    }
+
+    .stat-number {
+        Display: block;
+        Font-size: 2.5rem;
+        Font-weight: bold;
+        Color: #FFD166;
+    }
+
+    .stat-label {
+        Font-size: 0.9rem;
+        Opacity: 0.9;
+    }
+
+    /*  * دکمه‌ها* 
+    .container{
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+    }
+    .btn {
+        Display: inline-flex;
+        Align-items: center;
+        Gap: 8px !important;
+        Padding: 0;
+        Border-radius: 30px;
+        Text-decoration: none;
+        Font-weight: bold;
+        Transition: var(--transition);
+        Border: none;
+        Cursor: pointer;
+        Font-family: 'Vazirmatn', sans-serif;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    button:not(:last-child) {
+        margin-bottom: 10px;
+    }
+    .btn-primary {
+        Background: var(--secondary-color);
+        Color: white;
+        display: inline-flex;
+        gap: 8px !important;
+        flex-direction: column;
+        width: 180px;
+        align-items: center;
+        margin-left: 15px;
+    }
+
+    .btn-primary:hover {
+        Background: #FF6B4A;
+        Transform: translateY(-3px);
+        Box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+        Background: rgb(54, 201, 155);
+        Color: rgb(223, 231, 228);
+        display: inline-flex;
+        gap: 8px !important;
+        flex-direction: column;
+        width: 180px;
+        align-items: center;
+    }
+
+    .btn-secondary:hover {
+        Background: rgb(54, 201, 155);
+        Color: var(--shadow);
+        Transform: translateY(-3px);
+    }   */
+
+
+
+
+
+
+
+
+/* دکمه‌ها */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.btn-primary:hover {
+    background: #3A5A8A;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background: var(--accent-color);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5ABF72;
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-small {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+
+
+
+    
+    /* بخش دسته‌بندی محصولات */
+    .section {
+        Padding: 5rem 0;
+    }
+
+    .section-header {
+        Text-align: center;
+        Margin-bottom: 3rem;
+    }
+
+    .section-title {
+        Font-size: 2.5rem;
+        Color: var(--dark-color);
+        Margin-bottom: 1rem;
+        Display: flex;
+        Align-items: center;
+        Justify-content: center;
+        Gap: 1rem;
+    }
+
+    .section-subtitle {
+        Color: var(--text-light);
+        Font-size: 1.1rem;
+    }
+
+    .category-tabs {
+        Display: flex;
+        Justify-content: center;
+        Gap: 1rem;
+        Margin-bottom: 3rem;
+        Flex-wrap: wrap;
+    }
+
+    .category-tab {
+        Padding: 0.8rem 2rem;
+        Background: white;
+        Border: 2px solid var(--border-color);
+        Border-radius: 30px;
+        Cursor: pointer;
+        Transition: var(--transition);
+        Font-weight: 500;
+    }
+
+    .category-tab:hover,
+    .category-tab.active {
+        Background: var(--primary-color);
+        Color: white;
+        Border-color: var(--primary-color);
+    }
+/* استایل کارت محصولات */
+.courses-section {
+    Padding: 80px 0;
+}
+
+.section-title {
+    Text-align: center;
+    Margin-bottom: 50px;
+    Color: var(--dark-color);
+    Position: relative;
+}
+
+.section-title::after {
+    Content: '';
+    Position: absolute;
+    Bottom: -15px;
+    Right: 50%;
+    Transform: translateX(50%);
+    Width: 80px;
+    Height: 4px;
+    Background-color: var(--secondary-color);
+    Border-radius: 2px;
+}
+
+.category-tabs {
+    Display: flex;
+    Justify-content: center;
+    Gap: 1rem;
+    Margin-bottom: 3rem;
+    Flex-wrap: wrap;
+}
+
+.category-tab {
+    Padding: 0.8rem 2rem;
+    Background: white;
+    Border: 2px solid var(--primary-color);
+    Border-radius: 30px;
+    Cursor: pointer;
+    Transition: all 0.3s ease;
+    Font-weight: 500;
+    Font-family: 'Vazirmatn', sans-serif;
+}
+
+.category-tab:hover,
+.category-tab.active {
+    Background: var(--primary-color);
+    Color: white;
+    Transform: translateY(-3px);
+    Box-shadow: 0 5px 15px rgba(74, 111, 165, 0.3);
+}
+
+.products-container {
+    Display: grid;
+    Grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    Gap: 2rem;
+}
+
+/* کارت محصولات */
+.product-card {
+    Border: none;
+    Border-radius: 15px;
+    Overflow: hidden;
+    Box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    Transition: all 0.3s ease;
+    Height: 100%;
+    Background: white;
+}
+
+.product-card:hover {
+    Box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    Transform: translateY(-10px);
+}
+
+.product-header {
+    Background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    Color: white;
+    Padding: 20px;
+    Text-align: center;
+    Position: relative;
+}
+
+.product-icon {
+    Font-size: 2rem;
+    Margin-bottom: 10px;
+}
+
+.product-body {
+    Padding: 25px;
+}
+
+.product-info {
+    Background-color: #f8f9fa;
+    Padding: 15px;
+    Border-radius: 10px;
+    Margin-top: 15px;
+    Border-right: 4px solid var(--primary-color);
+}
+
+.product-price {
+    Background: linear-gradient(135deg, #fff5f5, #fff);
+    Padding: 15px;
+    Border-radius: 10px;
+    Margin-top: 15px;
+    Border: 2px dashed #ff7e5f;
+}
+
+.discount-badge {
+    Position: absolute;
+    Top: 15px;
+    Left: 15px;
+    Background: #FF6B6B;
+    Color: white;
+    Padding: 5px 12px;
+    Border-radius: 20px;
+    Font-size: 0.8rem;
+    Font-weight: bold;
+}
+    /* جدول قیمت‌ها */
+    .price-table-section {
+        Background: linear-gradient(135deg, var(--light-color) 0%, #fff 100%);
+    }
+
+    .price-table {
+        Width: 100%;
+        Border-collapse: collapse;
+        Background: white;
+        Border-radius: 15px;
+        Overflow: hidden;
+        Box-shadow: var(--shadow);
+    }
+
+    .price-table th {
+        Background: var(--primary-color);
+        Color: white;
+        Padding: 1.2rem;
+        Text-align: center;
+    }
+
+    .price-table td {
+        Padding: 1.5rem;
+        Text-align: center;
+        Border-bottom: 1px solid var(--border-color);
+    }
+
+    .price-table tr:hover {
+        Background: #f8f9fa;
+    }
+
+    .table-image {
+        Width: 120px;
+        Height: 120px;
+        Object-fit: cover;
+        Border-radius: 10px;
+        Border: 2px solid var(--border-color);
+    }
+
+    /* ویدئوها */
+.video-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.video-wrapper {
+    flex: 2;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+.video-player {
+    width: 100px;
+    height: 100px;
+}
+
+.video-placeholder {
+    position: relative;
+    height: 150px;
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-placeholder i {
+    position: absolute;
+    color: white;
+    font-size: 4rem;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.video-info {
+    padding: 2rem;
+    margin-top: 35px;
+}
+
+.video-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.video-meta {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    color: var(--text-light);
+}
+
+.video-thumbnails {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.thumbnail {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.thumbnail.active {
+    border-right: 4px solid var(--primary-color);
+}
+
+.thumbnail:hover {
+    transform: translateX(-5px);
+}
+
+.thumbnail img {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* لینک‌ها */
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.link-card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text-color);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    display: block;
+}
+
+.link-card:hover {
+    transform: translateY(-10px);
+    background: var(--primary-color);
+    color: white;
+}
+
+.link-card:hover .link-icon {
+    background: white;
+    color: var(--primary-color);
+}
+
+.link-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+/* بخش تماس */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.contact-methods {
+    margin: 2rem 0;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--light-color);
+    border-radius: 8px;
+    margin: 0 auto;
+    place-items: center;
+}
+
+.contact-method i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    background: var(--light-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.contact-form h3 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-family: 'Vazirmatn', sans-serif;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 111, 165, 0.1);
+}
+
+
+    /* فوتر */
+    Footer {
+        Background: var(--dark-color);
+        Color: white;
+        Padding: 3rem 0 1.5rem;
+        Margin-top: 4rem;
+    }
+
+    .footer-content {
+        Display: grid;
+        Grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        Gap: 3rem;
+        Margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+        Font-size: 1.3rem;
+        Margin-bottom: 1.5rem;
+        Display: flex;
+        Align-items: center;
+        Gap: 0.5rem;
+    }
+
+    .footer-links {
+        List-style: none;
+    }
+
+    .footer-links li {
+        Margin-bottom: 0.8rem;
+    }
+
+    .footer-links a {
+        Color: #ccc;
+        Text-decoration: none;
+        Transition: var(--transition);
+        Display: flex;
+        Align-items: center;
+        Gap: 0.5rem;
+    }
+
+    .footer-links a:hover {
+        Color: white;
+        Padding-right: 10px;
+    }
+
+    .social-links {
+        Display: flex;
+        Gap: 1rem;
+        Margin-top: 1rem;
+    }
+
+    .social-link {
+        Width: 40px;
+        Height: 40px;
+        Border-radius: 50%;
+        Background: rgba(255, 255, 255, 0.1);
+        Display: flex;
+        Align-items: center;
+        Justify-content: center;
+        Color: white;
+        Text-decoration: none;
+        Transition: var(--transition);
+    }
+
+    .social-link:hover {
+        Background: var(--primary-color);
+        Transform: translateY(-3px);
+    }
+
+    .copyright {
+        Text-align: center;
+        Padding-top: 2rem;
+        Border-top: 1px solid rgba(255, 255, 255, 0.1);
+        Color: #aaa;
+        Font-size: 0.9rem;
+    }
+
+    /* ریسپانسیو */
+    @media (max-width: 992px) {
+        .hero-content {
+            Flex-direction: column;
+            Text-align: center;
+        }
+        
+        .hero-stats {
+            Justify-content: center;
+        }
+        
+        .nav-menu {
+            Display: none;
+        }
+        
+        .menu-toggle {
+            Display: block;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .products-grid {
+            Grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+        
+        .price-table {
+            Display: block;
+            Overflow-x: auto;
+        }
+    }
